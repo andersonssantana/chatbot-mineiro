@@ -15,7 +15,7 @@ O **Chatbot Zeca** é um projeto experimental para construir um chatbot com pers
 ## Estrutura do Projeto
 
 ```plaintext
-├── main.py                # Script principal para rodar o chatbot
+├── main.py                 # Script principal para rodar o chatbot
 ├── initial_prompt.py       # Definição inicial do prompt para configurar o estilo de resposta do chatbot
 ├── requirements.txt        # Lista de dependências do projeto
 └── README.md               # Documentação do projeto
