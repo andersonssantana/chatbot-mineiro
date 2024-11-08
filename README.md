@@ -17,7 +17,7 @@ O **Chatbot Zeca** é um projeto experimental para construir um chatbot com pers
 ```plaintext
 ├── main.py                # Script principal para rodar o chatbot
 ├── initial_prompt.py       # Definição inicial do prompt para configurar o estilo de resposta do chatbot
-├── lesson_env              # Arquivo de ambiente virtual para o projeto
+├── requirements.txt        # Lista de dependências do projeto
 └── README.md               # Documentação do projeto
 ```
 
@@ -49,11 +49,17 @@ Antes de executar o projeto, certifique-se de ter instalado:
 2. Crie um ambiente virtual e ative-o:
 
    ```bash
-   python3 -m venv lesson_env
-   source lesson_env/bin/activate  # No Windows: lesson_env\Scripts\activate
+   python3 -m venv env
+   source env/bin/activate  # No Windows: env\Scripts\activate
    ```
 
-3. Configure a API Gemini com sua chave no `main.py`.
+3. Instale as dependências:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Configure a API Gemini com sua chave no `main.py`.
 
 ## Como Usar
 
