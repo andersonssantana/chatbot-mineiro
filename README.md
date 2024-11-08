@@ -49,8 +49,8 @@ Antes de executar o projeto, certifique-se de ter instalado:
 2. Crie um ambiente virtual e ative-o:
 
    ```bash
-   python3 -m venv env
-   source env/bin/activate  # No Windows: env\Scripts\activate
+   python3 -m venv .env
+   source .env/bin/activate  # No Windows: .env\Scripts\activate
    ```
 
 3. Instale as dependências:
