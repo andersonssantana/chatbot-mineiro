@@ -32,7 +32,7 @@ def process_and_upload_files(user_input):
     return processed_files
 
 def handle_chat_response(user_input, _history):
-    #Função que serve como wrapper para interação com o Gradio.
+    #Processa o input do usupario e retorna a resposta do chatbot.
     prompt = build_chat_prompt(user_input)
     try:
         response = gemini_chat_session.send_message(prompt)
