@@ -1,4 +1,4 @@
-import google.generativeai as gemini
+import google.generativeai as genai
 from google.api_core.exceptions import InvalidArgument
 from initial_prompt import initialPrompt
 import os
@@ -6,9 +6,9 @@ import time
 import gradio
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
-gemini.configure(api_key=GEMINI_API_KEY)
+genai.configure(api_key=GEMINI_API_KEY)
 
-model = gemini.GenerativeModel("gemini-1.5-flash", system_instruction=initialPrompt)
+model = genai.GenerativeModel("gemini-1.5-flash", system_instruction=initialPrompt)
 chat = model.start_chat()
 
 def assemble_prompt(message):
@@ -21,10 +21,10 @@ def upload_files(message):
   uploaded_files = []
   if message["files"]:
       for file_gradio_data in message["files"]:
-          uploaded_file = gemini.upload_file(file_gradio_data)
+          uploaded_file = genai.upload_file(file_gradio_data)
           while uploaded_file.state.name == "PROCESSING":
               time.sleep(5)
-              uploaded_file = gemini.get_file(uploaded_file.name)
+              uploaded_file = genai.get_file(uploaded_file.name)
           uploaded_files.append(uploaded_file)
   return uploaded_files
 
