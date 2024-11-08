@@ -35,7 +35,7 @@ Antes de executar o projeto, certifique-se de ter instalado:
 
 - **Python 3.8+**
 - **Gradio** (para a interface gráfica)
-- **Requests** (para chamadas à API Gemini)
+- **Google AI Python SDK** (para chamadas à API Gemini)
 
 ## Instalação
 
@@ -49,7 +49,7 @@ Antes de executar o projeto, certifique-se de ter instalado:
 2. Crie um ambiente virtual e ative-o:
 
    ```bash
-   python3 -m venv .env
+   python -m venv .env
    source .env/bin/activate  # No Windows: .env\Scripts\activate
    ```
 
